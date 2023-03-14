@@ -1,1 +1,86 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+.container-start, .container-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-adaptive {
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+
+.container-start, .container-center {
+  width: 100%;
+}
+
+.container-center {
+  align-items: center;
+}
+
+.container-start {
+  align-items: start;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.container-start, .container-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-adaptive {
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+
+.container-start, .container-center {
+  width: 100%;
+}
+
+.container-center {
+  align-items: center;
+}
+
+.container-start {
+  align-items: start;
+}
+
+.container-center, .container-start {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-adaptive {
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+
+.container-center, .container-start {
+  width: 100%;
+}
+
+.container-center {
+  align-items: center;
+}
+
+.container-start {
+  align-items: start;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: Quicksand;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+body {
+  position: relative;
+  display: grid;
+  color: rgb(35, 35, 35);
+  background-color: rgb(244, 244, 244);
+}/*# sourceMappingURL=main.css.map */
