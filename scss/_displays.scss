@@ -32,10 +32,19 @@
 .container-center {
     @extend %grid;
     @extend %container;
-    align-items: center
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
 }
+
 .container-start {
     @extend %grid;
     @extend %container;
-    align-items: start;
+    justify-content: start;
+}
+
+.container-end {
+    @extend %grid;
+    @extend %container;
+    justify-content: end;
 }
