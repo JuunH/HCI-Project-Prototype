@@ -1,0 +1,41 @@
+// Display Queries
+@mixin tablet {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+
+@mixin desktop {
+    @media (min-width: 1000px) {
+        @content;
+    }
+}
+
+
+// Grid display
+%grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid-adaptive {
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+}
+
+
+// Container
+%container {
+    width: 100%;
+}
+.container-center {
+    @extend %grid;
+    @extend %container;
+    align-items: center
+}
+.container-start {
+    @extend %grid;
+    @extend %container;
+    align-items: start;
+}
