@@ -16,25 +16,40 @@
 // Grid display
 %grid {
     display: grid;
-    justify-items: center;
-    align-items: center;
 }
 
 .grid-adaptive {
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+
+    @include desktop {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 
 // Container
 %container {
+    position: relative;
+    justify-self: center;
     width: 100%;
+    height: max-content;
+    padding: 1rem;
+
+    h1, p {
+        margin: .5rem 0 .5rem 0;
+    }
+
+    img {
+        justify-self: center;
+        width: 65%
+    }
 }
+
 .container-center {
     @extend %grid;
     @extend %container;
     justify-content: center;
-    margin: 1rem;
-    padding: 1rem;
+    align-items: center;
 }
 
 .container-start {
@@ -47,4 +62,8 @@
     @extend %grid;
     @extend %container;
     justify-content: end;
+}
+
+section {
+    max-width: 600px;
 }
