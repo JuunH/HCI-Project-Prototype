@@ -15,8 +15,8 @@
     scroll-behavior: smooth;
     font-family: font(primary);
     line-height: 1.5;
-    
     transition: 250ms;
+    box-sizing: border-box;
 }
 
 
@@ -24,24 +24,27 @@
 body {
     position: relative;
     display: grid;
+    grid-template-rows: max-content;
+    width: 100%;
     color: colour(element);
     background-color: colour(bg);
 }
 
 
+// Navigation
 nav {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto;
     padding: 1rem;
     z-index: 2;
-    max-width: 1920px;
+    max-width: 1620px;
 
     a {
         text-decoration: none;
     }
 
-    h1 {
+    h1{
         color: colour(element);
         text-decoration: none;
         width: fit-content;
@@ -61,45 +64,35 @@ nav {
         }
     }
 
-    .cta {
+    .signin-login {
+        display: none;
         grid-template-columns: auto auto;
         font-weight: 700;
 
-        .call-to-action {
+        .sl-buttons {
             display: none;
             margin: 0 1rem 0 1rem;
-            text-align: center;
 
             @include desktop {
                 display: block;
             }
         }
 
-        :nth-child(1), :nth-child(2) {
-            padding: 0.5rem 1rem 0.5rem 1rem;
-            border: 2px solid;
-            border-radius: 4px;
-            border-color: colour(element);
-
-            &:hover {
-                transform: scale(0.9);
-                cursor: pointer;
-            }
-        }
-
-        :nth-child(1) {
-            color: colour(bg);
-            background-color: colour(element);
+        @include desktop {
+            display: grid;
         }
     }
 
     @include desktop {
+        justify-self: center;
         grid-template-columns: 2fr 4fr 2fr;
     }
 }
 
 .mobile-menu {
     @extend %grid;
+    justify-items: center;
+    align-items: center;
     position: fixed;
     z-index: 1;
     top: 0;
