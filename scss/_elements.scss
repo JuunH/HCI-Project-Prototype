@@ -76,3 +76,49 @@
     color: colour(element);
     font-weight: 700;
 }
+
+
+// Button
+.button {
+    justify-self: center;
+    width: max-content;
+    border: 2px solid;
+    border-radius: 4px;
+    border-color: colour(element);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(0.9);
+            cursor: pointer;
+    }
+
+    &.one, &.two {
+        margin: 1rem;
+        padding: .5rem 1rem .5rem 1rem;
+    }
+
+    &.one {
+        background-color: colour(element);
+        color: colour(bg);
+    }
+
+    &.two {
+        background-color: colour(bg);
+        color: colour(element);
+    }
+}
+
+.call-to-actions {
+    @include tablet {
+        grid-template-columns: max-content max-content;
+    }
+
+    @include desktop {
+
+        .button {
+            font-size: 1.25rem;
+            padding: 1rem 1.5rem 1rem 1.5rem;
+        }
+    }
+}
