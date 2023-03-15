@@ -10,3 +10,8 @@ $fonts: (
 @function font($font) {
     @return map-get($fonts, $font);
 }
+
+
+.text-center {
+    text-align: center;
+}
