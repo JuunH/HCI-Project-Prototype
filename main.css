@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-.mobile-menu, .journey, .container-end, .container-start, .container-center {
+.mobile-menu, .option, .container-end, .container-start, .container-center {
   display: grid;
 }
 
@@ -21,22 +21,13 @@
 
 .container-end {
   justify-content: end;
-}
-
-.journey {
-  display: grid;
-  align-items: center;
-  justify-self: start;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem 0 0.5rem;
-  width: 100%;
 }
 
 .text-center {
   text-align: center;
 }
 
-.mobile-menu, .journey, .container-end, .container-start, .container-center {
+.mobile-menu, .option, .container-end, .container-start, .container-center {
   display: grid;
 }
 
@@ -60,16 +51,7 @@
   justify-content: end;
 }
 
-.journey {
-  display: grid;
-  align-items: center;
-  justify-self: start;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem 0 0.5rem;
-  width: 100%;
-}
-
-.mobile-menu, .container-center, .container-start, .container-end, .journey {
+.mobile-menu, .container-center, .container-start, .container-end, .option {
   display: grid;
 }
 
@@ -91,15 +73,6 @@
 
 .container-end {
   justify-content: end;
-}
-
-.journey {
-  display: grid;
-  align-items: center;
-  justify-self: start;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem 0 0.5rem;
-  width: 100%;
 }
 
 .menuicon {
@@ -192,6 +165,18 @@
   color: rgb(35, 35, 35);
 }
 
+.select.active {
+  border-color: rgb(30, 111, 197);
+  background-color: rgb(30, 111, 197);
+  color: rgb(244, 244, 244);
+}
+
+.cancel.active {
+  border-color: rgb(190, 0, 0);
+  background-color: rgb(190, 0, 0);
+  color: rgb(244, 244, 244);
+}
+
 .call-to-actions a {
   margin: 0.5rem;
 }
@@ -223,6 +208,9 @@ form {
   display: grid;
   width: 100%;
   margin-bottom: 2rem;
+}
+form .button {
+  justify-self: end;
 }
 form label, form input, form textarea {
   display: block;
@@ -292,6 +280,31 @@ input[type=checkbox] {
   .card {
     grid-template-columns: auto 1fr;
   }
+}
+
+.option {
+  display: grid;
+  align-items: center;
+  justify-self: start;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem 0 0.5rem;
+  width: 100%;
+}
+
+.option-name {
+  font-size: 1.25rem;
+}
+
+.rating, .accepted {
+  color: rgb(57, 167, 33);
+}
+
+.awaiting {
+  color: rgb(0, 127, 201);
+}
+
+.cancelled {
+  color: rgb(190, 0, 0);
 }
 
 * {
