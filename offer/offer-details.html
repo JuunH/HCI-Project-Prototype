@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride-Sharing Prototype</title>
+    <link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <a href="/index.html"><h1>Logo/Company</h1></a>
+    <div id="menuicon" class="menuicon fadein">
+      <span id="one"></span>
+      <span id="two"></span>
+    </div>
+      <ul class="menuoption" class="link-list">
+        <li><a href="/index.html" class="link-nav">Home</a></li>
+        <li><a href="/request/requests.html" class="link-nav">Requests</a></li>
+        <li><a href="/offer/offers.html" class="link-nav">Offers</a></li>
+        <li><a href="/account/account.html" class="link-nav">Account</a></li>
+      </ul>
+      <div class="signin-login container-end">
+        <div class="button one sl-buttons">Sign up</div>
+        <div class="button two sl-buttons">Login</div>
+      </div>
+  </nav>
+
+  <main>
+    <section class="forms">
+      <h1>Enter a New Offer</h1>
+      <div>
+        <h3>Enter Your Location</h3>
+        <form>
+          <label for="add1">Address Line 1</label>
+          <input type="text" id="add1" placeholder="Address Line 1">
+          <label for="add2">Address Line 2</label>
+          <input type="text" id="add2" placeholder="Address Line 2 (Optional)">
+          <label for="town-city">Town/City</label>
+          <input type="text" id="town-city" placeholder="Town / City">
+          <label for="postcode">Postcode</label>
+          <input type="text" id="town-city" placeholder="Postcode">
+        </form>
+        <h4>Enter pick-up radius</h4>
+        <form>
+          <label for="riders">Radius in Km</label>
+          <input type="number" id="riders" placeholder="Radius (Km)">
+        </form>
+      </div>
+
+      <div>
+        <h3>Enter Your Destination</h3>
+        <form>
+          <label for="add1">Address Line 1</label>
+          <input type="text" id="add1" placeholder="Address Line 1">
+          <label for="add2">Address Line 2</label>
+          <input type="text" id="add2" placeholder="Address Line 2 (Optional)">
+          <label for="town-city">Town/City</label>
+          <input type="text" id="town-city" placeholder="Town / City">
+          <label for="postcode">Postcode</label>
+          <input type="text" id="town-city" placeholder="Postcode">
+        </form>
+      </div>
+
+      <div>
+        <h3>Enter the Ride Time, Day, & Date</h3>
+        <form>
+          <label for="time">Time</label>
+          <input type="time" id="time" placeholder="Time">
+          <label for="date">Date</label>
+          <input type="date" id="date" placeholder="Date">
+        </form>
+      </div>
+
+      <div>
+        <h3>Enter number of Available Seats</h3>
+        <form>
+          <label for="riders">Number of Riders</label>
+          <input type="number" id="riders" placeholder="Number of Riders">
+        </form>
+      </div>
+
+      <div>
+        <h3>Select Payment Details</h3>
+        <div class="option">
+          <p><b>HSBC</b><br>
+            **** 1234
+          </p>
+          <a href="#" class="button two select">Select</a>
+        </div>
+        <div class="option">
+          <p><b>Halifax</b><br>
+            **** 4321
+          </p>
+          <a href="#" class="button two select">Select</a>
+        </div>
+        
+        <h4>Add new bank account</h4>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Name">
+          <label for="account-number">Account Number</label>
+          <input type="text" id="account-number" placeholder="Account Number">
+          <label for="code">Sort Code</label>
+          <input type="text" id="code" placeholder="Sort Code">
+          <a href="#" class="button two">Add Bank Account</a>
+        </form>
+      </div>
+
+      <div>
+        <h3>Notification</h3>
+        <form>
+          <div class="checkbox">
+            <input type="checkbox" id="sms">
+            <label for="sms">SMS Message</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="email">
+            <label for="accessibility">Email</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="notification">
+            <label for="notification">App Notification</label>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <h3>Optional</h3>
+        <form>
+          <div class="checkbox">
+            <input type="checkbox" id="assistance">
+            <label for="assistance">Can Provide Assistance</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="accessibility">
+            <label for="accessibility">Car is Accessible</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="save">
+            <label for="save">Save details for future rides</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="save">
+            <label for="save">Repeat same day, every week</label>
+          </div>
+        </form>
+      </div>
+
+      <a href="/offer/offer-confirmation.html" class="button one">Send Offer</a>
+    </section>
+  
+  </main>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <ul class="menuoption" class="link-list">
+      <li><a href="/index.html" class="link-nav">Home</a></li>
+      <li><a href="/request/requests.html" class="link-nav">Requests</a></li>
+      <li><a href="/offer/offers.html" class="link-nav">Offers</a></li>
+      <li><a href="/account/account.html" class="link-nav">Account</a></li>
+    </ul> 
+  </div>
+  <script src="/scripts.js"></script>
+</body>
+</html>
