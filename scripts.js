@@ -15,3 +15,30 @@ function toggleOptions() {
 menuicon.addEventListener('click', () => {
   toggleOptions()
 })
+
+
+// Selected Button Function
+
+const select = document.querySelectorAll(".select");
+
+select.forEach(function(button) {
+  button.addEventListener("click", function() {
+    if (button.textContent !== "Selected") {
+      button.textContent = "Selected";
+    } else {
+      button.textContent = "Select";
+    }
+    button.classList.toggle('active')
+  });
+});
+
+// Cancelled Button Function
+
+const cancel = document.querySelectorAll(".cancel");
+
+cancel.forEach(function(button) {
+  button.addEventListener("click", function() {
+    button.textContent = "Cancelled"
+    button.classList.add('active')
+  });
+});
