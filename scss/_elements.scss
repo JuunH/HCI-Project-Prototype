@@ -109,6 +109,10 @@
         background-color: colour(bg);
         color: colour(element);
     }
+
+    &.side {
+        margin: .5rem auto .5rem auto;
+    }
 }
 
 .select {

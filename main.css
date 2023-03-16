@@ -164,6 +164,9 @@
   background-color: rgb(244, 244, 244);
   color: rgb(35, 35, 35);
 }
+.button.side {
+  margin: 0.5rem auto 0.5rem auto;
+}
 
 .select.active {
   border-color: rgb(30, 111, 197);
