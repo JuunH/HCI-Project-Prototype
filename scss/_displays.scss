@@ -18,31 +18,16 @@
     display: grid;
 }
 
-.grid-adaptive {
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-
-    @include desktop {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
-
 
 // Container
 %container {
     position: relative;
-    justify-self: center;
     width: 100%;
     height: max-content;
-    padding: 1rem;
+}
 
-    h1, p {
-        margin: .5rem 0 .5rem 0;
-    }
-
-    img {
-        justify-self: center;
-        width: 65%
-    }
+.container {
+    @extend %container;
 }
 
 .container-center {
@@ -64,6 +49,14 @@
     justify-content: end;
 }
 
-section {
-    max-width: 600px;
+
+// Journey element
+.journey {
+    @extend %grid;
+    display: grid;
+    align-items: center;
+    justify-self: start;
+    grid-template-columns: 1fr auto;
+    padding: .5rem 0 .5rem;
+    width: 100%;
 }

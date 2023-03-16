@@ -49,6 +49,8 @@
 }
 
 %link {
+    position: relative;
+    color: colour(element);
     text-decoration: none;
 
     &::after {
@@ -70,6 +72,10 @@
     }
 }
 
+.link {
+    @extend %link;
+}
+
 .link-nav {
     @extend %link;
     position: relative;
@@ -87,15 +93,11 @@
     border-color: colour(element);
     font-weight: 600;
     text-decoration: none;
+    padding: .5rem 1rem .5rem 1rem;
 
     &:hover {
         transform: scale(0.9);
             cursor: pointer;
-    }
-
-    &.one, &.two {
-        margin: 1rem;
-        padding: .5rem 1rem .5rem 1rem;
     }
 
     &.one {
@@ -110,15 +112,109 @@
 }
 
 .call-to-actions {
+    a {
+        margin: .5rem;
+        @include desktop {
+            margin: 1rem;
+        }
+    }
     @include tablet {
         grid-template-columns: max-content max-content;
     }
 
     @include desktop {
-
         .button {
             font-size: 1.25rem;
             padding: 1rem 1.5rem 1rem 1.5rem;
         }
+    }
+}
+
+
+// Forms
+.forms {
+    display: grid;
+    & > * {
+        border-bottom: solid colour(element);
+    }
+}
+
+form {
+    display: grid;
+    width: 100%;
+    margin-bottom: 2rem;
+    label, input, textarea {
+        display: block;
+    }
+
+    label {
+        margin-bottom: .25rem;
+        width: max-content;
+    }
+
+    input, textarea {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        padding: .5rem 1rem .5rem 1rem;
+		border: 1px solid colour(element);
+		border-radius: 4px;
+        background-color: colour(bg);
+
+        &:focus {
+            outline: 2px solid colour(element);
+        }
+    }
+
+    input[type="submit"] {
+        justify-self: end;
+    }
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+.checkbox {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    & > * {
+        padding: .5rem;
+    }
+}
+
+
+// Card
+.card {
+    padding: 2rem;
+    background-color: colour(accent);
+
+    a {
+        margin: 1rem;
+    }
+
+    & > * {
+        margin: .5rem;
+
+        @include tablet() {
+            margin: .5rem 0 .5rem 0;
+        }
+    }
+
+    img {
+        justify-self: center;
+        width: 90%;
+        border-radius: 8px;
+        @include desktop {
+            justify-self: end;
+        }
+    }
+    
+    @include tablet() {
+        grid-template-columns: auto 1fr;
     }
 }
