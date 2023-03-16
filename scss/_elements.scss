@@ -111,6 +111,22 @@
     }
 }
 
+.select {
+    &.active {
+        border-color: colour(selected);
+        background-color: colour(selected);
+        color: colour(bg);
+    }
+}
+
+.cancel {
+    &.active {
+        border-color: colour(cancelled);
+        background-color: colour(cancelled);
+        color: colour(bg);
+    }
+}
+
 .call-to-actions {
     a {
         margin: .5rem;
@@ -143,6 +159,11 @@ form {
     display: grid;
     width: 100%;
     margin-bottom: 2rem;
+
+    .button {
+        justify-self: end;
+    }
+
     label, input, textarea {
         display: block;
     }
@@ -217,4 +238,32 @@ input[type="checkbox"] {
     @include tablet() {
         grid-template-columns: auto 1fr;
     }
+}
+
+
+// Option
+.option {
+    @extend %grid;
+    display: grid;
+    align-items: center;
+    justify-self: start;
+    grid-template-columns: 1fr auto;
+    padding: .5rem 0 .5rem;
+    width: 100%;
+}
+
+.option-name {
+    font-size: 1.25rem;
+}
+
+.rating, .accepted {
+    color: colour(rating);
+}
+
+.awaiting {
+    color: colour(awaiting);
+}
+
+.cancelled {
+    color: colour(cancelled);
 }

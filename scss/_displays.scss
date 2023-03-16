@@ -48,15 +48,3 @@
     @extend %container;
     justify-content: end;
 }
-
-
-// Journey element
-.journey {
-    @extend %grid;
-    display: grid;
-    align-items: center;
-    justify-self: start;
-    grid-template-columns: 1fr auto;
-    padding: .5rem 0 .5rem;
-    width: 100%;
-}
