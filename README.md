@@ -1,4 +1,4 @@
-# Human-Computer Interaction Project and Report
+# Human-Computer Interaction Project Prototype
 ## Viewing The Mockup Website Prototype
 - Download and extract the .zip file of the project
 - Go inside the extracted folder
